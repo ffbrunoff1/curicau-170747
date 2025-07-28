@@ -45,7 +45,7 @@ export default function Hero() {
               className="text-4xl md:text-6xl font-extrabold text-secondary leading-tight mb-4"
               variants={itemVariants}
             >
-              Drenagem de qualidade!
+              construcao eh aqui
             </motion.h1>
             <motion.p
               className="text-lg md:text-xl text-dark/80 mb-8"
