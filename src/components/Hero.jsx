@@ -1,11 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-
 export default function Hero() {
   const heroImageUrl =
     'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop';
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -16,7 +14,6 @@ export default function Hero() {
       },
     },
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -28,7 +25,6 @@ export default function Hero() {
       },
     },
   };
-
   return (
     <section
       id="home"
@@ -41,13 +37,15 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
-          <div className="text-center md:text-left">
+          <motion.div
+            className="text-center md:text-left"
+            variants={containerVariants}
+          >
             <motion.h1
               className="text-4xl md:text-6xl font-extrabold text-secondary leading-tight mb-4"
               variants={itemVariants}
             >
-              Construa o futuro com a{' '}
-              <span className="text-primary">Curicau</span>!
+              Drenagem de qualidade!
             </motion.h1>
             <motion.p
               className="text-lg md:text-xl text-dark/80 mb-8"
@@ -65,7 +63,7 @@ export default function Hero() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </motion.div>
-          </div>
+          </motion.div>
           <motion.div
             className="relative"
             variants={itemVariants}
@@ -76,7 +74,7 @@ export default function Hero() {
             <motion.img
               src={heroImageUrl}
               alt="Equipe de construção trabalhando em um projeto"
-              className="relative w-full h-auto rounded-lg shadow-2xl object-cover max-h-[500px]"
+              className="relative z-10 w-full h-auto rounded-lg shadow-2xl object-cover max-h-[500px]"
             />
           </motion.div>
         </motion.div>
